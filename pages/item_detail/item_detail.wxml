@@ -1,0 +1,2 @@
+<!--pages/item_detail/item_detail.wxml-->
+{{item_id}}

@@ -1,0 +1,112 @@
+<view class="my_container">
+    <view class="userinfo">
+        <view class='head-wrap' wx:if="{{!hasUserInfo}}" >
+            <view class="no-login-avatar">
+                <view class='no-avatar'>
+                    <image class='avatar' src="/images/icon/default_avatar_big.png"></image>
+                </view>
+                <button class='btn-login' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">获取用户信息</button>
+            </view>
+        </view>
+        <view class='head-wrap' wx:else bindtap='goProfile'>
+            <view class="head-l">
+                <view class='l'>
+                    <image class='avatar' src="{{userInfo.avatarUrl}}"></image>
+                </view>
+                <view class='r'>
+                    <view class='t'>
+                        <view class='name'>{{userInfo.nickName}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="head-r">
+                <view class="arrow"></view>
+            </view>
+        </view>
+    </view>
+    <view class="order-container">
+        <view class='header' data-index='0' >
+            <view class='top-title'>
+                <view class='left-line'></view>
+                <view class='text'>我的订单</view>
+            </view>
+            <view class='see-more'>
+                <view class="text">查看全部订单</view>
+                <view class="arrow"></view>
+            </view>
+        </view>
+        <view class='btn-container'>
+            <view class='icon-wrap' data-index='1' >
+                <view class='order-icon-wrap'>
+                    <image class='order-icon' src='/images/icon/icon-pay-r.png'>
+                    </image>
+                    <view  class='red-point'>10</view>
+                </view>
+                <text class='order-txt'>待付款</text>
+            </view>
+            <view class='icon-wrap' data-index='2' >
+                <view class='order-icon-wrap'>
+                    <image class='order-icon' src='/images/icon/icon-delivery-r.png'>
+                    </image>
+                    <view  class='red-point'>10</view>
+                </view>
+                <text class='order-txt'>待发货</text>
+            </view>
+            <view class='icon-wrap' data-index='3' >
+                <view class='order-icon-wrap'>
+                    <image class='order-icon' src='/images/icon/icon-onroad-r.png'>
+                    </image>
+                    <view  class='red-point'>10</view>
+                </view>
+                <text class='order-txt'>待收货</text>
+            </view>
+        </view>
+    </view>
+    <view class="li-wrap">
+        <view class="list" >
+            <view class="list-l">
+                <view class="icon">
+                    <image class="img" src="/images/icon/icon-address-r.png"></image>
+                </view>
+                <view class="text">地址管理</view>
+            </view>
+            <view class="arrow"></view>
+        </view>
+    </view>
+    <view class="li-wrap">
+        <view class="list" >
+            <view class="list-l">
+                <view class="icon">
+                    <image class="img" src="/images/icon/icon-footprint-r.png"></image>
+                </view>
+                <view class="text">我的足迹</view>
+            </view>
+            <view class="arrow"></view>
+        </view>
+        <view class="list" >
+            <view class="list-l">
+                <view class="icon">
+                    <image class="img" src="/images/icon/icon-about-r.png"></image>
+                </view>
+                <view class="text">关于我们</view>
+            </view>
+            <view class="arrow"></view>
+        </view>
+    </view>
+
+    <!--模态框 start-->
+    <view class="cu-modal {{modalName=='Modal'?'show':''}}">
+        <view class="cu-dialog">
+            <view class="cu-bar bg-white justify-end">
+                <view class="content">提示</view>
+                <view class="action" bindtap="hideModal">
+                    <text class="cuIcon-close text-red"></text>
+                </view>
+            </view>
+            <view class="padding-xl">
+                {{modal_content}}
+            </view>
+        </view>
+    </view>
+    <!--模态框 end-->
+</view>

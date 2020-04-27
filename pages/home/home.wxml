@@ -1,0 +1,34 @@
+<!--pages/home/home.wxml-->
+<view id="home">
+    <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+        <swiper-item  wx:for="{{swiperArr}}" wx:key="index" class="{{cardCur==index?'cur':''}}">
+            <view catch:tap="getCurrent" data-modal="Modal" data-index="{{index}}" class="swiper-item" style="background:url({{item.photo}})">
+            </view>
+        </swiper-item>
+    </swiper>
+    <!--瀑布流 start-->
+    <brickLayout
+            dataSet="{{dataSet}}"
+            option="{{brick_option}}"
+            bind:tapCard="tapCard"
+            bind:tapLike="handleLike"
+            bind:tapUser="handleUserEvent"
+            bind:onCardExpanded="handleExpand"
+    />
+    <!--瀑布流 end-->
+    <!--模态框 start-->
+    <view class="cu-modal {{modalName=='Modal'?'show':''}}">
+        <view class="cu-dialog">
+            <view class="cu-bar bg-white justify-end">
+                <view class="content">提示</view>
+                <view class="action" bindtap="hideModal">
+                    <text class="cuIcon-close text-red"></text>
+                </view>
+            </view>
+            <view class="padding-xl">
+                {{modal_content}}
+            </view>
+        </view>
+    </view>
+    <!--模态框 end-->
+</view>
