@@ -1,0 +1,38 @@
+/* pages/otherPages/addressList/addressList‘.wxss */
+.bottom_block{
+    padding: 20rpx 0 ;
+    background: #FF3461;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
+.address_item{
+    border-bottom: 1rpx yellow solid;
+    display: flex;
+    justify-content: space-between;
+    background: darkcyan;
+}
+.address_item_name{
+
+}
+.address_item_edit{
+    position: relative;
+    height: 100%;
+    width: 150rpx;
+    background: aquamarine;
+    vertical-align: middle;
+}
+.address_item_edit_text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.address_item_padding{
+    padding: 20rpx 20rpx;
+}
+.blackblock{
+    height: 90rpx;
+}

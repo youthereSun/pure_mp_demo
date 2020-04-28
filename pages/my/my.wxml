@@ -30,7 +30,7 @@
                 <view class='left-line'></view>
                 <view class='text'>我的订单</view>
             </view>
-            <view class='see-more'>
+            <view class='see-more' bind:tap="checkAllOrders">
                 <view class="text">查看全部订单</view>
                 <view class="arrow"></view>
             </view>
@@ -63,7 +63,7 @@
         </view>
     </view>
     <view class="li-wrap">
-        <view class="list" >
+        <view class="list" bind:tap="manageAddressList" >
             <view class="list-l">
                 <view class="icon">
                     <image class="img" src="/images/icon/icon-address-r.png"></image>

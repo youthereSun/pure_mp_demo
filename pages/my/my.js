@@ -44,6 +44,9 @@ Page({
   },
   goProfile(){
     console.log("前往profile")
+    wx.navigateTo({
+      url: "/pages/profile/profile"
+    })
   },
   showModal(content){
     this.setData({
@@ -61,6 +64,17 @@ Page({
     this.setData({
       userInfo:{},
       hasUserInfo:false
+    })
+  },
+  manageAddressList(){
+    wx.navigateTo({
+      url:"/pages/otherPages/addressList/addressList"
+    })
+
+  },
+  checkAllOrders(){
+    wx.navigateTo({
+      url:   "/pages/otherPages/allOrders/allOrders"
     })
   },
 

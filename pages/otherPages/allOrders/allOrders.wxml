@@ -1,0 +1,25 @@
+<view>
+    <scroll-view scroll-x class="bg-white nav">
+        <view class="flex text-center">
+            <view class="cu-item flex-sub {{index==TabCur?'text-orange cur':''}}" wx:for="{{navList}}" wx:key="index" bindtap="tabSelect" data-id="{{index}}">
+                {{item.name}}
+            </view>
+        </view>
+    </scroll-view>
+   <view>
+       <swiper bindchange="swiperSelect" current="{{TabCur}}" class="screen-swiper"  circular="true" >
+           <swiper-item >
+               <view>全部</view>
+           </swiper-item>
+           <swiper-item >
+               <view>待付款</view>
+           </swiper-item>
+           <swiper-item >
+               <view>待发货</view>
+           </swiper-item>
+           <swiper-item >
+               <view>待收货</view>
+           </swiper-item>
+       </swiper>
+   </view>
+</view>

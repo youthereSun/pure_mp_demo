@@ -1,0 +1,43 @@
+<view id="profile">
+    <view>
+        <form>
+            <view class="cu-form-group">
+                <view class="title">真实姓名</view>
+                <input bind:blur="setName" value="{{name}}" ></input>
+            </view>
+            <view class="cu-form-group ">
+                <view class="title">邮件</view>
+                <input bind:blur="setMail" value="{{mail}}" ></input>
+            </view>
+            <view class="cu-form-group">
+                <view class="title">手机号码</view>
+                <input bind:blur="setMobile" value="{{mobile}}" ></input>
+                <view class="cu-capsule radius">
+                    <view class="cu-tag bg-blue">
+                        +86
+                    </view>
+                    <view class="cu-tag line-blue">
+                        中国大陆
+                    </view>
+                </view>
+            </view>
+        </form>
+        <button class="confirm_btn" bind:tap="confirm_modification">确认修改</button>
+        <!--模态框 start-->
+        <view class="cu-modal {{modalName=='Modal'?'show':''}}">
+            <view class="cu-dialog">
+                <view class="cu-bar bg-white justify-end">
+                    <view class="content">提示</view>
+                    <view class="action" bindtap="hideModal">
+                        <text class="cuIcon-close text-red"></text>
+                    </view>
+                </view>
+                <view class="padding-xl">
+                    {{modal_content}}
+                </view>
+            </view>
+        </view>
+        <!--模态框 end-->
+    </view>
+
+</view>

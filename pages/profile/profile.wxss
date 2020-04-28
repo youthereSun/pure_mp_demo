@@ -1,0 +1,9 @@
+/* pages/profile/profile.wxss */
+.confirm_btn{
+    width: 100%;
+    background: #e54d42;
+    margin-top: 50rpx;
+    color: white;
+    font-size: 30rpx;
+
+}

@@ -1,0 +1,12 @@
+    <map id="map" longitude="{{longitude}}"
+         latitude="{{latitude}}"  scale="18"
+         markers="{{markers}}"
+         polyline="{{polyline}}"
+         circles="{{circles}}"
+         show-location="true"
+         show-compass="true"
+         bindtap="getCurLocation"
+    ></map>
+    <view>
+        {{locationInfo}}
+    </view>
