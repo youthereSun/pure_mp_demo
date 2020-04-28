@@ -103,6 +103,7 @@ Page({
                 arr1.push(item)
             }
             console.log(arr1)
+            this.data.markers=[].concat(this.data.markers[0])
             this.setData({
                 nearbyList:arr,
                 markers:this.data.markers.concat(arr1)
