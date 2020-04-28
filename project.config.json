@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"preloadBackgroundData": false,
@@ -26,7 +26,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.11.0",
 	"appid": "wxe5275d43f4bb809b",
-	"projectname": "miniprogram-1",
+	"projectname": "demo",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

@@ -1,12 +1,51 @@
-    <map id="map" longitude="{{longitude}}"
-         latitude="{{latitude}}"  scale="18"
+<view>
+    <map id="map"
+         longitude="{{longitude}}"
+         latitude="{{latitude}}"
+         scale="14"
          markers="{{markers}}"
-         polyline="{{polyline}}"
-         circles="{{circles}}"
          show-location="true"
          show-compass="true"
          bindtap="getCurLocation"
+         show-scale="{{true}}"
+         enable-overlooking="{{true}}"
+         enable-rotate="{{true}}"
+         enable-zoom="{{true}}"
+         polygons="{{nearbyListPoints}}"
     ></map>
-    <view>
-        {{locationInfo}}
+    <view class="my_position">我的位置：{{locationInfo}} <button bind:tap="relocate">relocate</button></view>
+    <view class="stick_item">
+        <view class="cu-form-group bg_keyword">
+            <view bind:tap="searchNearby" class="title">搜索附近</view>
+            <input bind:blur="setKeyword" data-keyword="{{search_keyword}}" value="{{search_keyword}}"></input>
+        </view>
     </view>
+    <view class="nearbyList">
+        <view bind:tap="goThere" data-title="{{item.title}}" data-location="{{item.location}}" class="address_item" wx:key="id" wx:for="{{nearbyList}}">
+            <view>
+                <view class="address_item_title">{{item.title}}</view>
+                <view>{{item.category}}-{{item.address}}</view>
+                <view>{{item.tel}}</view>
+            </view>
+            <view class="address_item_distance">
+                {{item._distance}}米
+            </view>
+        </view>
+    </view>
+
+    <!--模态框 start-->
+    <view class="cu-modal {{modalName=='Modal'?'show':''}}">
+        <view class="cu-dialog">
+            <view class="cu-bar bg-white justify-end">
+                <view class="content">提示</view>
+                <view class="action" bindtap="hideModal">
+                    <text class="cuIcon-close text-red"></text>
+                </view>
+            </view>
+            <view class="padding-xl">
+                {{modal_content}}
+            </view>
+        </view>
+    </view>
+    <!--模态框 end-->
+</view>

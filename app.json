@@ -55,6 +55,10 @@
     "brickLayout": {
       "version": "0.2.0",
       "provider": "wx3c042630f3cdc175"
+    },
+    "routePlan": {
+      "version": "1.0.5",
+      "provider": "wx50b5593e81dd937a"
     }
   },
   "usingComponents": {
@@ -62,7 +66,7 @@
   },
   "permission": {
     "scope.userLocation": {
-      "desc": "请点击确定"
+      "desc": "你的位置信息将用于小程序定位"
     }
   }
 }

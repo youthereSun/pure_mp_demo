@@ -2,3 +2,27 @@
     width: 100%;
     height: 70vh;
 }
+.address_item{
+    display: flex;
+    justify-content: space-between;
+    padding: 20rpx 20rpx;
+    border-bottom: 2rpx cadetblue solid;
+}
+.address_item_distance{
+    width: 200rpx;
+}
+.address_item_title{
+    font-weight: 700;
+    font-size: 25rpx;
+}
+.stick_item{
+    position: sticky;
+    top: 0;
+}
+.bg_keyword{
+    background: cadetblue;
+}
+.my_position{
+    padding: 20rpx 20rpx;
+    text-align: center;
+}
