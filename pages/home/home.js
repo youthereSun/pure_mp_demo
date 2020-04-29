@@ -1,4 +1,6 @@
-// pages/home/home.js
+import api from '../../api/api'
+import {LOGIN} from '../../api/apiList'
+
 Component({
     /**
      * 组件的属性列表
@@ -153,5 +155,16 @@ Component({
         onReachBottom: function () {
             console.log('reach bottom')
         },
+        sendRequest(){
+            let options={
+                username:"admin",
+                password:"admin"
+            };
+            api.post(LOGIN,options).then(res=>{
+                wx.setStorageSync("token",res.token)
+            }).catch(error=>{
+                console.log(error)
+            })
+        }
     }
 })

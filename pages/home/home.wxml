@@ -15,6 +15,9 @@
             bind:tapUser="handleUserEvent"
             bind:onCardExpanded="handleExpand"
     />
+    <view>
+    <button bind:tap="sendRequest">模拟发送请求</button>
+    </view>
     <!--瀑布流 end-->
     <!--模态框 start-->
     <view class="cu-modal {{modalName=='Modal'?'show':''}}">

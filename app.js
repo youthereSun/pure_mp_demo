@@ -38,9 +38,11 @@ App({
               }
             })*/
     },
+    //https://www.easy-mock.com/mock/5d68c5ba68a38466244d1c50/getMYPics
     globalData: {
         userInfo: null,
         openID: '',
+        host: 'https://mock.yonyoucloud.com/mock/6131',
         addressList: [{
             id: 0,
             name: "张三",
