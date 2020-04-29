@@ -15,7 +15,9 @@ Page({
         locationInfo: "",
         search_radius: 10000,
         search_keyword: "",
-        nearbyListPoints: []
+        nearbyListPoints: [],
+        animation_block_style:"",
+        search_bgcolor:"#00B26A"
 
     },
     onLoad: function () {
@@ -24,6 +26,7 @@ Page({
             type: "gcj02",
             success: function (res) {
                 that.setData({
+                    search_bgcolor:that.data.search_bgcolor,
                     latitude: res.latitude,
                     longitude: res.longitude,
                     markers: [{
@@ -38,6 +41,31 @@ Page({
 
             }
         })
+    },
+    onChange(e) {
+        console.log(e)
+        this.setData({
+            search_keyword: e.detail
+        })
+    },
+    show(e) {
+        var updataStyle;
+        if (e.detail.isFixed) {
+            updataStyle="height:80px;background:orange;"
+            console.log("到顶了")
+            this.setData({
+                search_bgcolor:"orange",
+                animation_block_style:updataStyle
+            })
+        }else {
+            updataStyle=""
+            console.log("到顶了")
+            this.setData({
+                search_bgcolor:"#00B26A",
+                animation_block_style:updataStyle
+            })
+        }
+
     },
     getCurLocation(e) {
         console.log(e.detail)
@@ -149,9 +177,9 @@ Page({
             url: 'plugin://routePlan/index?navigation=1&key=' + key + '&referer=' + referer + '&endPoint=' + endPoint + '&startPoint=' + startPoint
         });
     },
-    gohome(e){
+    gohome(e) {
         wx.switchTab({
-            url:"/pages/home/home"
+            url: "/pages/home/home"
         })
         console.log(e)
     },

@@ -13,15 +13,29 @@
          enable-zoom="{{true}}"
          polygons="{{nearbyListPoints}}"
     ></map>
-    <view class="my_position">我的位置：{{locationInfo}} <button bind:tap="relocate">relocate</button></view>
-    <view class="stick_item">
-        <view class="cu-form-group bg_keyword">
-            <view bind:tap="searchNearby" class="title">搜索附近</view>
-            <input bind:blur="setKeyword" data-keyword="{{search_keyword}}" value="{{search_keyword}}"></input>
-        </view>
+    <view class="my_position">我的位置：{{locationInfo}}
+        <button bind:tap="relocate">relocate</button>
     </view>
+    <van-sticky >
+        <view  style="{{animation_block_style}}"></view>
+    <view >
+        <van-search
+                value="{{ search_keyword }}"
+                label="地址"
+                placeholder="请输入搜索关键词"
+                use-action-slot
+                bind:change="onChange"
+                background="{{search_bgcolor}}"
+
+        >
+            <view slot="action" bind:tap="searchNearby">搜索附近</view>
+        </van-search>
+    </view>
+    </van-sticky>
+
     <view class="nearbyList">
-        <view bind:tap="goThere" data-title="{{item.title}}" data-location="{{item.location}}" class="address_item" wx:key="id" wx:for="{{nearbyList}}">
+        <view bind:tap="goThere" data-title="{{item.title}}" data-location="{{item.location}}" class="address_item"
+              wx:key="id" wx:for="{{nearbyList}}">
             <view>
                 <view class="address_item_title">{{item.title}}</view>
                 <view>{{item.category}}-{{item.address}}</view>
