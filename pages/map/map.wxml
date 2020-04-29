@@ -1,4 +1,11 @@
+<navBar
+        title-text="地图"
+        backIcon="/images/back@3x.png"
+        home-icon="/images/home_icon@3x.png"
+        bindhome="gohome"
+        bindback="back"/>
 <view>
+
     <map id="map"
          longitude="{{longitude}}"
          latitude="{{latitude}}"

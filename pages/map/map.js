@@ -149,6 +149,12 @@ Page({
             url: 'plugin://routePlan/index?navigation=1&key=' + key + '&referer=' + referer + '&endPoint=' + endPoint + '&startPoint=' + startPoint
         });
     },
+    gohome(e){
+        wx.switchTab({
+            url:"/pages/home/home"
+        })
+        console.log(e)
+    },
     relocate() {
         this.onLoad();
 

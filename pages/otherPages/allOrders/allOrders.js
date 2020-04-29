@@ -86,6 +86,11 @@ Page({
       TabCur: current,
     })
   },
+  gohome(){
+    wx.switchTab({
+      url:"/pages/home/home"
+    })
+  },
 
   /**
    * 用户点击右上角分享

@@ -1,3 +1,9 @@
+<navBar
+        title-text="全部订单"
+        backIcon="/images/back@3x.png"
+        home-icon="/images/home_icon@3x.png"
+        bindhome="gohome"
+        bindback="back"/>
 <view>
     <scroll-view scroll-x class="bg-white nav">
         <view class="flex text-center">

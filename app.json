@@ -15,8 +15,9 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
-  },
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "default"
+    },
   "tabBar": {
     "color": "#6e6d6b",
     "selectedColor": "#ff3456",
@@ -62,7 +63,7 @@
     }
   },
   "usingComponents": {
-    "cu-custom": "/colorui/components/cu-custom"
+    "navBar": "/components/navBar/navBar"
   },
   "permission": {
     "scope.userLocation": {
