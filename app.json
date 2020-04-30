@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/discover/discover",
     "pages/map/map",
     "pages/home/home",
     "pages/index/index",
@@ -17,7 +18,7 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black",
     "navigationStyle": "default"
-    },
+  },
   "tabBar": {
     "color": "#6e6d6b",
     "selectedColor": "#ff3456",
@@ -31,10 +32,10 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/shop_list/shop_list",
+        "pagePath": "pages/discover/discover",
         "iconPath": "images/nav/icon-cate-off.png",
         "selectedIconPath": "images/nav/icon-cate-on.png",
-        "text": "分类"
+        "text": "发现"
       },
       {
         "pagePath": "pages/map/map",
@@ -63,9 +64,12 @@
   },
   "usingComponents": {
     "navBar": "/components/navBar/navBar",
+    "card": "/components/card/card",
     "van-button": "miniprogram_npm/vant-weapp/button/index",
     "van-search": "miniprogram_npm/vant-weapp/search/index",
-    "van-sticky": "@vant/weapp/sticky/index"
+    "van-sticky": "@vant/weapp/sticky/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index"
   },
   "permission": {
     "scope.userLocation": {

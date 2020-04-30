@@ -1,6 +1,6 @@
 {
   "component": true,
-  "navigationStyle": "custom",
+  "navigationBarBackgroundColor": "#EB7459",
   "usingComponents": {
     "brickLayout": "plugin://brickLayout/brickLayout"
   }

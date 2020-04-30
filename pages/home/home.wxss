@@ -1,7 +1,9 @@
-/* pages/home/home.wxss */
-#home{
-}
+
 .swiper_item_content {
     background-repeat: no-repeat;
     background-size: cover;
+}
+.block_sticky{
+    padding:10px 0px;
+    background: #EB7459;
 }

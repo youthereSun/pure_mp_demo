@@ -23,12 +23,12 @@
 .home-icon{
     left: 50px
 }
-.back-icon image{
+.back-icon .back_icon_img{
     width: 28px;
     height: 28px;
     margin: auto;
 }
-.home-icon image{
+.home-icon .back_icon_img{
     width: 20px;
     height: 20px;
     margin: auto;

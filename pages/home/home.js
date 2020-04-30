@@ -86,7 +86,7 @@ Component({
             showFullContent: true,
             // backgroundColor:"#16A085",
             // forceRepaint: true,
-            defaultExpandStatus: true,
+            defaultExpandStatus: false,
             // imageFillMode:'aspectFill'
             // columns: 3
             // icon: {

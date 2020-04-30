@@ -1,7 +1,4 @@
-<!--pages/home/home.wxml-->
-<navBar
-        title-text="主页"
-       />
+
 <view id="home">
     <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
         <swiper-item  wx:for="{{swiperArr}}" wx:key="index" class="{{cardCur==index?'cur':''}}">
@@ -19,7 +16,12 @@
             bind:onCardExpanded="handleExpand"
     />
     <view>
-    <button bind:tap="sendRequest">模拟发送请求</button>
+        <van-sticky>
+            <view class="block_sticky">
+                <button bind:tap="sendRequest">模拟发送请求</button>
+            </view>
+        </van-sticky>
+
     </view>
     <!--瀑布流 end-->
     <!--模态框 start-->

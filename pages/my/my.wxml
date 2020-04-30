@@ -1,4 +1,5 @@
 <view class="my_container">
+    <van-sticky>
     <view class="userinfo">
         <view class='head-wrap' wx:if="{{!hasUserInfo}}" >
             <view class="no-login-avatar">
@@ -24,6 +25,7 @@
             </view>
         </view>
     </view>
+    </van-sticky>
     <view class="order-container">
         <view class='header' data-index='0' >
             <view class='top-title'>

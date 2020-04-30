@@ -1,4 +1,6 @@
 {
   "component": true,
+  "navigationBarBackgroundColor": "#50AAA8",
+  "navigationBarTitleText": "个人中心",
   "usingComponents": {}
 }
