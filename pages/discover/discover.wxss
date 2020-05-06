@@ -1,0 +1,15 @@
+.release_more{
+    width: 100rpx;
+    height: 100rpx;
+    background: #3E4363;
+    border-radius: 100rpx;
+    position: fixed;
+    right: 20rpx;
+    bottom: 20rpx;
+}
+.add_button{
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+    width: 60rpx;
+    height: 60rpx;
+}

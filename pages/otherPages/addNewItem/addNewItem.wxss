@@ -1,0 +1,7 @@
+.textarea_container{
+    padding: 0 20rpx;
+}
+textarea{
+    margin-top: 20rpx;
+    width: 100%;
+}

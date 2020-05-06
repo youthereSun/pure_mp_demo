@@ -1,8 +1,7 @@
 {
   "pages": [
-    "pages/discover/discover",
-    "pages/map/map",
     "pages/home/home",
+    "pages/map/map",
     "pages/index/index",
     "pages/item_detail/item_detail",
     "pages/shop_list/shop_list",
@@ -10,6 +9,8 @@
     "pages/otherPages/addressList/addressList",
     "pages/otherPages/addNewAddress/addnewAddress",
     "pages/otherPages/allOrders/allOrders",
+    "pages/otherPages/addNewItem/addNewItem",
+    "pages/discover/discover",
     "pages/my/my"
   ],
   "window": {
@@ -64,12 +65,15 @@
   },
   "usingComponents": {
     "navBar": "/components/navBar/navBar",
+    "mainNav": "/components/mainNav/mainNav",
     "card": "/components/card/card",
     "van-button": "miniprogram_npm/vant-weapp/button/index",
     "van-search": "miniprogram_npm/vant-weapp/search/index",
     "van-sticky": "@vant/weapp/sticky/index",
     "van-grid": "@vant/weapp/grid/index",
-    "van-grid-item": "@vant/weapp/grid-item/index"
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-uploader": "@vant/weapp/uploader/index"
   },
   "permission": {
     "scope.userLocation": {

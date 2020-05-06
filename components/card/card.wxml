@@ -1,0 +1,22 @@
+<view class="card_container">
+    <view class="header_image">
+        <image class="header_image_size" src="{{header_img_url}}"></image>
+    </view>
+    <view class="content_container">
+    <view class="username">{{username}}</view>
+    <view class="content">{{content}}</view>
+    <view class="pics">
+        <van-grid gutter="{{10}}" column-num="3" border="{{ true }}">
+            <van-grid-item use-slot wx:for="{{ imgList }}" >
+                <image
+                        style="width: 100%; height: 80px;"
+                        src="{{item.imgUrl}}"
+                />
+            </van-grid-item>
+        </van-grid>
+
+    
+    </view>
+
+    </view>
+</view>

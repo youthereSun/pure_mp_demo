@@ -1,0 +1,15 @@
+<view class="textarea_container">
+<textarea maxlength="{{140}}" placeholder="这一刻的想法...">
+
+</textarea>
+
+    <van-uploader
+            file-list="{{ fileList }}"
+            max-count="9"
+            bind:delete="delete"
+            bind:after-read="afterRead"
+    />
+
+    <van-button type="primary" block>发表</van-button>
+
+</view>

@@ -1,0 +1,11 @@
+.mainNav{
+    height: 400rpx;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: url("http://img3.imgtn.bdimg.com/it/u=2977070590,2911782999&fm=26&gp=0.jpg");
+    background-size: cover;
+}
+.mainNav_holder{
+    height: 400rpx;
+}

@@ -1,0 +1,31 @@
+<view>
+    <van-sticky >
+        <view >
+            <van-search
+                    value="{{ search_keyword }}"
+                    input-align="center"
+                    placeholder="搜搜感兴趣的^-^"
+                    use-action-slot
+                    clearable="{{false}}"
+                    background="#3E4363"
+                    shape="round"
+                    bind:search="doSearch"
+
+            >
+                <view slot="action" data-keyword="{{search_keyword}}" bind:tap="cancelSearch">取消</view>
+            </van-search>
+        </view>
+    </van-sticky>
+    <view>
+        <card
+                wx:for="{{list}}"
+                username="{{item.username}}"
+                header_img_url="{{item.header_img_url}}"
+                content="{{item.content}}"
+                imgList="{{item.imgList}}"
+        />
+    </view>
+    <view bind:tap="addNewItem" class="release_more">
+       <image class="add_button" src="../../images/addmore.png"></image>
+    </view>
+</view>

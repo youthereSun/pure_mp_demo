@@ -23,6 +23,7 @@
         </van-sticky>
 
     </view>
+    <van-divider contentPosition="center">我是有底线的^=^</van-divider>
     <!--瀑布流 end-->
     <!--模态框 start-->
     <view class="cu-modal {{modalName=='Modal'?'show':''}}">

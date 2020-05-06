@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "navigationBarBackgroundColor": "#BF0000",
+  "navigationBarTitleText": "发表",
+  "usingComponents": {
+  }
+}
