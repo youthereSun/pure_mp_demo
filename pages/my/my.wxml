@@ -76,6 +76,15 @@
         </view>
     </view>
     <view class="li-wrap">
+        <view class="list" bind:tap="systemScan" >
+            <view class="list-l">
+                <view class="icon">
+                    <image class="img" src="/images/icon/scan.png"></image>
+                </view>
+                <view class="text">二维码扫描</view>
+            </view>
+            <view class="arrow"></view>
+        </view>
         <view class="list" >
             <view class="list-l">
                 <view class="icon">

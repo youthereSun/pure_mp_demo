@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/my/my",
     "pages/home/home",
     "pages/map/map",
     "pages/index/index",
@@ -10,8 +11,8 @@
     "pages/otherPages/addNewAddress/addnewAddress",
     "pages/otherPages/allOrders/allOrders",
     "pages/otherPages/addNewItem/addNewItem",
-    "pages/discover/discover",
-    "pages/my/my"
+    "pages/discover/discover"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
