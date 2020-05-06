@@ -40,9 +40,9 @@
       },
       {
         "pagePath": "pages/map/map",
-        "iconPath": "images/nav/icon-cart-b.png",
-        "selectedIconPath": "images/nav/icon-cart-r.png",
-        "text": "map"
+        "iconPath": "images/nav/icon-map-b.png",
+        "selectedIconPath": "images/nav/icon-map-r.png",
+        "text": "地图"
       },
       {
         "pagePath": "pages/my/my",
