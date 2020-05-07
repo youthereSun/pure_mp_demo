@@ -6,8 +6,10 @@
     <van-uploader
             file-list="{{ fileList }}"
             max-count="9"
-            bind:delete="delete"
             bind:after-read="afterRead"
+            bind:delete="delete"
+            preview-size="90px"
+            image-fit="aspectFill"
     />
 
     <van-button type="primary" block>发表</van-button>

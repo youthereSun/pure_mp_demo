@@ -18,6 +18,7 @@
     </van-sticky>
     <view>
         <card
+                wx:key="index"
                 wx:for="{{list}}"
                 username="{{item.username}}"
                 header_img_url="{{item.header_img_url}}"

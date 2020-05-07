@@ -5,3 +5,6 @@ textarea{
     margin-top: 20rpx;
     width: 100%;
 }
+.van-uploader {
+    z-index: 999;
+}

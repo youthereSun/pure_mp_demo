@@ -24,8 +24,14 @@ Page({
             fileList: list
         })
     },
-    delete() {
-        console.log("0")
+    delete(e) {
+        let index = e.detail.index;
+        //let list =this.data.fileList 引用赋值，会造成数据混乱
+        let list = [].concat(this.data.fileList);
+        list.splice(index,1)
+        this.setData({
+            fileList:list
+        })
     }
 
 
