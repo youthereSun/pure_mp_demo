@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/music/music",
     "pages/home/home",
     "pages/otherPages/addNewItem/addNewItem",
     "pages/map/map",
@@ -12,6 +13,7 @@
     "pages/otherPages/allOrders/allOrders",
     "pages/discover/discover",
     "pages/my/my"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -20,6 +22,9 @@
     "navigationBarTextStyle": "black",
     "navigationStyle": "default"
   },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
   "tabBar": {
     "color": "#6e6d6b",
     "selectedColor": "#ff3456",
@@ -67,8 +72,8 @@
     "navBar": "/components/navBar/navBar",
     "mainNav": "/components/mainNav/mainNav",
     "card": "/components/card/card",
-     "van-button": "@vant/weapp/button/index",
-    "van-search": "@vant/weapp/search/index",
+    "van-button": "miniprogram_npm/vant-weapp/button/index",
+    "van-search": "miniprogram_npm/vant-weapp/search/index",
     "van-sticky": "@vant/weapp/sticky/index",
     "van-grid": "@vant/weapp/grid/index",
     "van-grid-item": "@vant/weapp/grid-item/index",

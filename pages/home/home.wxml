@@ -2,8 +2,8 @@
 <view id="home">
     <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
         <swiper-item  wx:for="{{swiperArr}}" wx:key="index" class="{{cardCur==index?'cur':''}}">
-            <view catch:tap="getCurrent" data-modal="Modal" data-index="{{index}}" class="swiper-item" style="background:url({{item.photo}})">
-            </view>
+            <image mode="aspectFill" catch:tap="getCurrent" data-modal="Modal" data-index="{{index}}" class="swiper-item" src="{{item.photo}}">
+            </image>
         </swiper-item>
     </swiper>
     <!--瀑布流 start-->
@@ -15,14 +15,7 @@
             bind:tapUser="handleUserEvent"
             bind:onCardExpanded="handleExpand"
     />
-    <view>
-        <van-sticky>
-            <view class="block_sticky">
-                <button bind:tap="sendRequest">模拟发送请求</button>
-            </view>
-        </van-sticky>
 
-    </view>
     <van-divider contentPosition="center">我是有底线的^=^</van-divider>
     <!--瀑布流 end-->
     <!--模态框 start-->
